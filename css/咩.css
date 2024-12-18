@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
+}
+
+/* 固定返回首頁按鈕 */
+.back-home {
+    position: fixed;
+    top: 2vh; /* 距離螢幕頂部 2% */
+    left: 2vw; /* 距離螢幕左側 2% */
+    background-color: red;
+    color: white;
+    padding: 1vh 2vw; /* 使用視口單位調整內邊距 */
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 2vw; /* 根據螢幕寬度調整字體大小 */
+}
+
+
+/* 頁面區塊樣式 */
+.section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* 標題樣式 */
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* 背景圖片 */
+.hero img{
+    width: 100%; 
+    height: auto; 
+    margin-bottom: -10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Features 區域 */
+.features {
+    background: #003366; /* 深藍背景 */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    color: #00bfff; /* 天藍色標題 */
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 欄 */
+    gap: 30px; /* 圖片間距 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    max-width: 900px; /* 限制整個區域寬度 */
+    margin: 0 auto; /* 垂直置中 */
+}
+
+.feature-grid img {
+    width: 100%; /* 確保圖片填滿區域 */
+    max-width: 250px; /* 圖片最大寬度 */
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 添加陰影效果 */
+    transition: transform 0.3s ease; /* 添加縮放動畫 */
+}
+
+.feature-grid img:hover {
+    transform: scale(1.1); /* 滑鼠懸停放大 */
+}
+
+
+
+/* Show 區域 */
+.show {
+    background: #f0f0f0;
+    color: black;
+}
+
+.show img {
+    max-width: 100%;
+}
+
+/* Gallery 區域 */
+/* Gallery 區域樣式 */
+.gallery {
+    background: #f8f8f8;
+    color: black;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.gallery-container {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden; /* 隱藏多餘的圖片 */
+}
+
+.gallery-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-slide {
+    min-width: 100%; /* 每張圖片佔滿整個容器寬度 */
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+/* 左右箭頭按鈕 */
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+.gallery-btn.prev {
+    left: 10px;
+}
+
+.gallery-btn.next {
+    right: 10px;
+}
+
+.gallery-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+#motorcycle-view {
+    position: relative;
+    width: 100%;
+    height: 100%;  /* 使容器的高度自適應 */
+    overflow: hidden;
+    text-align: center;
+}
+
+#motorcycle-360 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#motorcycle-img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease-out; /* 平滑過渡效果 */
+}
+
+

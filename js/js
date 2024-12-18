@@ -1,0 +1,55 @@
+const carouselContainer = document.querySelector('.carousel-container');
+
+let isDragging = false; // 是否正在拖曳
+let startX; // 滑鼠按下時的初始 X 座標
+let scrollLeft; // 滑鼠按下時的初始滾動位置
+
+// 滑鼠按下時
+carouselContainer.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - carouselContainer.offsetLeft; // 獲取按下時的 X 座標
+    scrollLeft = carouselContainer.scrollLeft; // 獲取當前滾動位置
+    carouselContainer.style.cursor = 'grabbing'; // 更改滑鼠指標
+});
+
+// 滑鼠移動時
+carouselContainer.addEventListener('mousemove', (e) => {
+    if (!isDragging) return; // 如果不是拖曳狀態，直接返回
+    e.preventDefault();
+    const x = e.pageX - carouselContainer.offsetLeft; // 當前 X 座標
+    const walk = (x - startX); // 計算拖曳距離
+    carouselContainer.scrollLeft = scrollLeft - walk; // 滾動容器
+});
+
+// 滑鼠放開時
+carouselContainer.addEventListener('mouseup', () => {
+    isDragging = false;
+    carouselContainer.style.cursor = 'grab'; // 恢復滑鼠指標
+});
+
+// 滑鼠離開容器時
+carouselContainer.addEventListener('mouseleave', () => {
+    isDragging = false;
+    carouselContainer.style.cursor = 'grab'; // 恢復滑鼠指標
+});
+
+// 獲取按鈕元素
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+// 監聽滾動事件
+window.addEventListener('scroll', () => {
+    // 如果滾動距離超過 300px，顯示按鈕；否則隱藏
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+// 點擊按鈕返回頂部
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0, // 頂部
+        behavior: 'smooth' // 平滑滾動
+    });
+});

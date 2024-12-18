@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Showcase</title>
+    <link rel="stylesheet" href="css/咩.css">
+</head>
+
+<body>
+    <a href="index.html" class="back-home">返回首頁</a>
+
+    <!-- Hero 區域 -->
+    <div class="hero">
+        <img src="/img/人機共鳴.jpg" alt="">
+    </div>
+
+    <!-- Features 區域 -->
+    <div class="section features">
+        <h2>FEATURES</h2>
+        <div class="feature-grid">
+            <img src="/img/feature02-1600x1208.jpg" alt="Feature 1">
+            <img src="/img/feature03-1600x1208.jpg" alt="Feature 2">
+            <img src="/img/feature04-1600x1208.jpg" alt="Feature 3">
+            <img src="/img/feature05-1600x1208.jpg" alt="Feature 4">
+            <img src="/img/feature08-1600x1208.jpg" alt="Feature 5">
+            <img src="/img/feature10-1600x1208.jpg" alt="Feature 6">
+            <img src="/img/feature33-1600x1208.jpg" alt="Feature 7">
+            <img src="/img/feature39-1600x1208.jpg" alt="Feature 8">
+            <img src="/img/feature41-1600x1208.jpg" alt="Feature 9">
+        </div>
+    </div>
+
+    <!-- Show 區域 -->
+    <section id="motorcycle-view" class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-item" id="motorcycle-360">
+                <img id="motorcycle-img" src="img/motorcycle/motorcycle_1.png" alt="Motorcycle" />
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Gallery 區域 -->
+    <div class="section gallery">
+        <h2>GALLERY</h2>
+        <div class="gallery-container">
+            <button class="gallery-btn prev" onclick="prevSlide()">&#10094;</button>
+            <div class="gallery-slider">
+                <img src="/img/gallery01.jpg" alt="Gallery Image 1" class="gallery-slide">
+                <img src="/img/gallery02.jpg" alt="Gallery Image 2" class="gallery-slide">
+                <img src="/img/gallery03.jpg" alt="Gallery Image 3" class="gallery-slide">
+            </div>
+            <button class="gallery-btn next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.gallery-slide');
+            const totalSlides = slides.length;
+
+            // 確保 index 在範圍內
+            currentSlide = (index + totalSlides) % totalSlides;
+
+            // 更新 slider 的 transform
+            const slider = document.querySelector('.gallery-slider');
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // 自動顯示第一張圖片
+        document.addEventListener('DOMContentLoaded', () => showSlide(currentSlide));
+    </script>
+
+    <script>
+        let motorcycleImg = document.getElementById('motorcycle-img');
+        let totalImages = 12; // 摩托車的總圖片數
+        let currentImageIndex = 1; // 當前顯示的圖片索引
+        let isMouseDown = false;
+        let startX = 0;
+
+        // 更新顯示的摩托車圖片
+        function updateMotorcycleImage(index) {
+            // 保證索引在有效範圍內
+            if (index < 1) index = 1;
+            if (index > totalImages) index = totalImages;
+
+            // 更新圖片的 src 屬性來顯示對應的角度
+            motorcycleImg.src = `img/motorcycle/motorcycle_${index}.png`;
+        }
+
+        // 防止圖片點擊事件
+        motorcycleImg.addEventListener('click', function (e) {
+            e.preventDefault(); // 禁止圖片點擊事件
+        });
+
+        // 當滑鼠按下時開始捕捉滑鼠移動
+        motorcycleImg.addEventListener('mousedown', function (e) {
+            e.preventDefault();  // 禁止圖片的拖動行為
+            isMouseDown = true;
+            startX = e.pageX;  // 記錄滑鼠的初始位置
+            motorcycleImg.style.transition = 'none'; // 禁用過渡動畫，使旋轉更加平滑
+        });
+
+        // 當滑鼠移動時更新圖片的索引
+        document.addEventListener('mousemove', function (e) {
+            if (isMouseDown) {
+                let diffX = e.pageX - startX;  // 計算滑鼠移動的距離
+                let moveRatio = diffX / window.innerWidth; // 計算移動比例
+
+                // 增加一個乘數來讓圖片更新更快
+                moveRatio = moveRatio * 3; // 增加此乘數來加快反應速度（例如乘以 3）
+
+                currentImageIndex = Math.floor((moveRatio + 1) * totalImages / 2); // 計算圖片索引
+                updateMotorcycleImage(currentImageIndex); // 根據計算的索引更新圖片
+            }
+        });
+
+        // 當滑鼠放開時停止滑動
+        document.addEventListener('mouseup', function () {
+            isMouseDown = false;
+            motorcycleImg.style.transition = 'transform 0.3s ease';  // 恢復過渡動畫
+        });
+
+    </script>
+</body>
+
+</html>
