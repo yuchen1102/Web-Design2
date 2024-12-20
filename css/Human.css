@@ -177,3 +177,67 @@ body {
 }
 
 
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h1 {
+    text-align: center;
+    margin: 0 0 10px;
+    color: #333;
+}
+h2 {
+    text-align: center;
+    margin: 0 0 20px;
+    color: #555;
+    position: relative;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+tr {
+    display: flex; /* 使用 Flexbox */
+    justify-content: space-between; /* 左右分開 */
+    border-bottom: 1px solid #eee; /* 底線分隔每行 */
+    padding: 10px 0;
+}
+tr:first-child {
+    border-top: 2px solid #555;
+    border-bottom: 2px solid #555;
+}        
+td {
+    padding: 0px 0; /* 控制上下內邊距 */
+}
+td:nth-child(1) {
+    text-align: left; /* 置左 */
+    color: #333;
+    flex: 1; /* 左邊欄位占滿空間 */
+}
+td:nth-child(2) {
+    text-align: left; /* 置右 */
+    color: #555;
+    flex: 1; /* 右邊欄位占滿空間 */
+}
+.bold-text {
+    font-weight: bold;
+}
+/* 響應式設計 */
+@media (max-width: 768px) {
+    tr {
+        flex-direction: column; /* 小螢幕時上下排列 */
+    }
+    td {
+        text-align: center;
+        padding: 5px;
+    }
+    td:nth-child(1), td:nth-child(2) {
+        text-align: center; /* 小螢幕置中 */
+    }
+}
