@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+/*區塊設定*/
+#contents {
+    width: 960px;
+    margin: 40px auto;
+    padding: 40px 80px;
+    border: 1px solid #f6bb9e;
+    background-color: rgba(145, 243, 34, 0.5);
+
+}
+
+
+
+/*視窗背景色設定*/
+body {
+    background-color: rgba(21, 50, 214, 0.5);
+    background-image: url(../img/Q.jpg);
+    background-attachment: fixed;
+}
+
+/*連結顏色設定*/
+a {
+    color: #df4839;
+}
+.menu a{
+    display: block;
+    padding: 10px;
+    background: #6fbb9a;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    
+    }
+    
+    .menu a:hover {
+        background-color: #90ddbb;
+    }
+
+
+
+/*頁首,導覽,頁尾的共通設定*/
+
+
+/*導覽樣式設定*/
+.menu li {
+    list-style-type: none;
+    display: inline-block;
+    width: 130px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+/*頁面標題設定*/
+h1 {
+    background-color: #6fbb9a;
+    color: #fff;
+    width: 300px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 5px dotted #5304e6;
+    font-size: 300%;
+    text-align: center;
+    line-height: 1;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/*次標題設定*/
+h2 {
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px dotted #94c8b1;
+    border-left: 10px solid #067e38;
+    color: #101d91;
+}
+
+/*小標題設定*/
+.h-sub {
+    color: #261da5;
+    padding: 10px;
+    background-color: #ddf122;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
+}
+
+/*內容區塊邊框設定*/
+
+
+/*「更多介紹」連結設定*/
+
+
+/*連結圖示設定*/
+
+
+/*區塊間分隔*/
+
+
+/*文繞圖設定*/
+.imgL{
+float: left;
+margin: 30px;
+}
+
+.imgR{
+float: right;
+margin-left: 30px;
+}
+
+.clear{
+clear:both;
+}
+
+
+
+/*圓形圖片設定*/
+.round{
+    border-radius: 50%;
+}
+
+
+.photo {
+    width: 480px;
+    height: 320px;
+}
+
+/*偽原素設定*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.back-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #333;
+    border-radius: 4px;
+  }
+
+
+
+

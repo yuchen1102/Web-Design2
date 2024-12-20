@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人介紹 </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
+</head>
+<style>
+        .back-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        color: #333;
+    }
+</style>
+<body>
+    <a href="#" class="back-link" onclick="goBack()">返回</a>
+
+    <script>
+        // JavaScript 函数，用于返回上一页
+        function goBack() {
+            window.history.back();
+        }
+</script>
+<div id="container">
+    <div id="header"><header>
+
+        <img src="img/dog.jpg" alt="" class="round img photo">
+        <p class="text01">
+            鄭宇辰 <br> Cheng yu chen
+        </p>
+
+    </header>
+    </div>
+
+    <main class="Location">
+    <h1>學歷</h1> 
+    <li class="menu"><a href="https://www.jwsh.tp.edu.tw/tc/index.aspx">景文高中</a></li>
+    <li class="menu"><a href="https://www.aeust.edu.tw/">亞東科技大學</a></li>
+
+    <h1>證照</h1>
+        <ol >
+            <li class="menu2 text02">工業電子丙級 </li>
+            <img src="img/證照.jfif" class="margin-top">
+        </ol>
+
+
+    <h1>社團</h1>
+        <li class="text02">羽球社</li>
+        <li class="text02">桌球社</li>
+
+    <h1>興趣</h1>
+        <li class="text02">聽音樂</li>
+        <li class="text02">看小說</li>
+    
+
+    </main>
+
+    <footer class="text02 text03">
+        學號:112111205
+        <br>
+        姓名:鄭宇辰
+        <br>
+        Gmail: <a href="mailto:jacky91102@gmail.com">jacky91102@gmail.com</a>
+        <a href="#header">
+        <div class="gotop">
+            <i class="fa-solid fa-arrow-up fa-bounce fa-2xl"></i>
+        </div> 
+        </a>
+        
+    </footer>
+</div>
+</body>
+
+
+</html>

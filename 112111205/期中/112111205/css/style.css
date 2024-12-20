@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/*區塊設定*/
+#container {
+    width: 980px;
+    margin: 40px auto;
+    background-color: #07025081;
+    padding: 40px 80px;
+    border: 10px solid#df4839;
+
+}
+
+
+
+/*視窗背景色設定*/
+body {
+    background-color: #94c8b1
+}
+
+/*連結顏色設定*/
+a {
+    color: #11dceb;
+}
+
+.menu a {
+    width: 100px;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    background: #86ddad;
+    border-radius: 8px;
+    color: #ff6600;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+    list-style-type: none;
+    display: inline-block;
+    width: 130px;
+    text-align: center;
+    
+}
+
+.menu a:hover {
+    background-color: #30ee40;
+}
+
+
+/*頁首,導覽,頁尾的共通設定*/
+
+
+/*導覽樣式設定*/
+.menu li {
+    list-style-type: none;
+    width: 100px;
+    text-align: center;
+    color: #fff9f8;
+}
+
+.menu2 {
+    width: 100px;
+    color: rgb(255, 255, 255);
+
+
+}
+
+
+
+/*頁面標題設定*/
+.h1 {
+    background-color: #e1eb5e94;
+    width: 275px;
+    text-align: center;
+    border-left: 5px solid #ffffff;
+    border-right: 5px solid #fdfdfd;
+    border-top: 1px solid #ec4949;
+    border-bottom: 1px solid #ec4949;
+}
+
+.span {
+    font-size: 200%;
+    color: #cc641f;
+}
+
+
+
+/*次標題設定*/
+h2 {
+    font-size: 180%;
+    padding-top: 16px;
+    padding-right: 250px;
+    margin-bottom: 35px;
+    color: #000000c7;
+    float: right;
+}
+
+/*小標題設定*/
+.h-sub {
+    color: #261da5;
+    padding: 10px;
+    background-color: #ddf122;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
+}
+
+
+
+/*內容字體設定*/
+.word {
+    color: white;
+}
+
+/*「更多介紹」連結設定*/
+
+
+/*連結圖示設定*/
+
+
+/*區塊間分隔*/
+
+
+/*文繞圖設定*/
+.imgL {
+    float: left;
+    margin: 30px;
+}
+
+.imgR {
+    float: right;
+    margin-left: 30px;
+}
+
+
+.clear {
+    clear: both;
+}
+
+
+
+/*圓形圖片設定*/
+.round {
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+
+.photo {
+    width: 300px;
+    height: 300px;
+}
+
+/*偽原素設定*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}

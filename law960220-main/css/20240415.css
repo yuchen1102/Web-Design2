@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(142, 200, 218);
+}
+#container {
+    width: 980px;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+.round{
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.imgL{
+    float: left;
+    margin-right: 30px;
+}
+.clear{
+    clear: both;
+}

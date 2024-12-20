@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        .inner{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            margin: 20px;
+            font-size: 50px;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+        }
+        .inner:nth-child(odd){
+            height: 400px;
+        }
+
+        .outer{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: stretch;
+            flex-wrap: wrap-reverse;    
+        }   
+        .back-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        color: #333;
+    }
+
+
+    </style>
+</head>
+<body>
+    <a href="#" class="back-link" onclick="goBack()">返回</a>
+
+    <script>
+        // JavaScript 函数，用于返回上一页
+        function goBack() {
+            window.history.back();
+        }
+</script>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+        <div class="inner">4</div>
+
+
+    </div>
+    
+</body>
+</html>

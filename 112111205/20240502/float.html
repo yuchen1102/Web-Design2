@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮動屬性</title>
+    <style>
+        #container{
+            width: 800px;
+            margin: 0px auto;
+            background-color: rgb(243, 115, 72);
+        }
+        .inner{
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            border: 1px solid black;
+            margin: 10px;
+            text-align: center;
+            font-size: 100%;
+        }
+        .left{
+            float: left;
+        }
+        .clear{
+            clear: both;
+        }
+        .back-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        color: #333;
+    }
+    </style>
+</head>
+<body>
+    
+<a href="#" class="back-link" onclick="goBack()">返回</a>
+
+<script>
+    // JavaScript 函数，用于返回上一页
+    function goBack() {
+        window.history.back();
+    }
+</script>
+    <div id="container">
+        <div class="inner ">嗨嗨</div>
+        <div class="inner left"></div>
+        <div class="inner left"></div>
+        <div class="inner clear"></div>
+    </div>
+
+    
+</body>
+</html>

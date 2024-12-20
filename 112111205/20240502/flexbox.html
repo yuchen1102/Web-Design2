@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彈性盒子</title>
+</head>
+<style>
+.inner{
+    width: 200px;   
+    height: 200px;
+    background-color: blueviolet;
+    margin: 10px;
+    font-size: 5em;
+    text-align: center;
+    display: inline-block;
+
+    }
+    #container{
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    .back-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        color: #333;
+    }
+
+</style>
+<body>
+    <a href="#" class="back-link" onclick="goBack()">返回</a>
+
+    <script>
+        // JavaScript 函数，用于返回上一页
+        function goBack() {
+            window.history.back();
+        }
+</script>
+    <div id="container">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+        <div class="inner">4</div>
+        <div class="inner">5</div>
+        <div class="inner">6</div>
+        <div class="inner">7</div>
+        <div class="inner">8</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/*框架*/
+body {
+    background-color: #f0bced
+}
+
+#container{
+    width: 1000px;
+    margin: 50px auto;
+    position: relative;
+
+}
+
+header{
+    height: 250px;
+    background-color: aqua;
+    position: relative;
+}
+
+
+
+main{
+    height: 1000px;
+    background-color: rgb(166, 243, 185);
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+footer{
+    height: 150px;
+    background-color: blanchedalmond;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+/*文字*/
+.Location{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+
+
+.text01{
+    font-size: 250%;
+    float: right;
+    padding-right: 280px;
+    padding-top: 30px;
+
+}
+.text02{
+    font-size: 150%;
+}
+
+.text03{
+    padding-left:20px;
+    padding-top: 50px;
+}
+
+/*標題*/
+h1 {
+    background-color: #e1eb5e94;
+    width: 275px;
+    text-align: center;
+    border-left: 5px solid #ffffff;
+    border-right: 5px solid #fdfdfd;
+    border-top: 1px solid #ec4949;
+    border-bottom: 1px solid #ec4949;
+}
+
+
+/*圖片*/
+.img{
+    position: relative;
+    left: 240px;
+    top: 25px;
+}
+
+.imgL{
+    float: left;
+    margin-left: 30px;
+    }
+    
+.imgR{
+    float: right;
+    margin-left: 30px;
+}
+
+.clear{
+    clear:both;
+}
+
+.round{
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+}
+
+/*箭頭向上*/
+.gotop{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 15px;
+    text-align: center;
+    line-height: 2.5em;        
+    position: fixed;
+    right: 0px;
+    bottom: 10px;
+    }
+/*超連結*/
+.menu a {
+    width: 100px;
+    text-align: center;
+    font-size: 120%;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    color: #1405e9;
+    background-color: rgb(133, 243, 243);
+    text-decoration: none;
+    margin-bottom: 10px;
+
+    list-style-type: none;
+    display: inline-block;
+    width: 130px;
+    text-align: center;
+    
+}
+
+.menu a:hover {
+    background-color: #c53623;
+}
+
+

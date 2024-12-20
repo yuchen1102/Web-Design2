@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stamic</title>
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
+    
+    <style>
+        body{
+            margin: 0px;
+        }
+        #container{
+            width: 900px;
+            margin: 50px 100px;
+            position: absolute;
+        }
+        header{
+            height: 100px;
+            background-color: aqua;
+            position: relative;
+        }
+        nav{
+            height: 100px;
+            background-color: aquamarine;
+        }
+        main{
+            height: 800px;
+            background-color: beige;
+        }
+        footer{
+            height: 100px;
+            background-color: blanchedalmond;
+        }
+        .gotop{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+            line-height: 3em;
+            position: absolute;
+            
+        }
+        .back-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        color: #333;
+    }
+    </style>
+</head>
+<body>
+    
+<a href="#" class="back-link" onclick="goBack()">返回</a>
+
+<script>
+    // JavaScript 函数，用于返回上一页
+    function goBack() {
+        window.history.back();
+    }
+</script>
+    <div id="container">
+        <header>header</header>
+        <nav>nav</nav>
+        <main>main</main>
+        <footer>footer</footer>
+        <div class="gotop">
+            <i class="fa-solid fa-arrow-up fa-bounce fa-2xl"></i>
+        </div>    
+    </div>
+</body>
+</html>

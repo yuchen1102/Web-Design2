@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float排版</title>
+    <style>
+        #container {
+            width: 980px;
+            margin: 0 auto;
+            background-color: aquamarine;
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border: 1px solid white;
+            margin: 10px;
+            font-size: 5em;
+            text-align: center;
+            line-height: 2.5em;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="20240502.html"><返回</a></h1>
+    <div id="container">
+        <div class="inner">1</div>
+        <div class="inner left">2</div>
+        <div class="inner left">3</div>
+        <div class="inner right">2</div>
+        <div class="inner right">3</div>
+        <div class="inner clear">4</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用DIV來排版</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0px;
+        }
+        #container{
+            width: 80%;
+            background-color: lightpink;
+            margin: 0px auto;
+        }
+        #header{
+            height: 300px;
+            background-color: lightblue;
+        }
+        #nav{
+            height: 100px;
+            background-color: lightcoral;
+        }
+        #aside{
+            width: 20%;
+            float: left;
+            min-height: 800px;
+            background-color: lightcyan;
+        }
+        #section{
+            width: 80%;
+            float: left;
+            min-height: 800px;
+            background-color: lightgoldenrodyellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #footer{
+            height: 200px;
+            clear: both;
+            background-color: lightgray;
+        }
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pic {
+            width: 365px;
+            height: 227px;
+            background-image: url(img/tasty.png);
+            background-position: 0px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item:not(:last-child) {
+            margin-right: 10px;
+        }
+        .item-title {
+            font-family: "Honk", system-ui;
+            font-size: 3.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header"><h1><a href="作品集.html"><返回</a></h1></div>
+        <div id="nav"></div>
+        <div id="main">
+            <div id="aside"></div>
+            <div id="section">
+                <div class="product">
+                    <div class="item">
+                        <div class="pic">
+                            <h1 class="item-title">tasty</h1>
+                        </div>
+                        <h1>漢堡</h1>
+                        <p>好吃</p>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                            <h1 class="item-title">tasty</h1>
+                        </div>
+                        <h1>漢堡</h1>
+                        <p>好吃</p>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                            <h1 class="item-title">tasty</h1>
+                        </div>
+                        <h1>漢堡</h1>
+                        <p>好吃</p>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                            <h1 class="item-title">tasty</h1>
+                        </div>
+                        <h1>漢堡</h1>
+                        <p>好吃</p>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                            <h1 class="item-title">tasty</h1>
+                        </div>
+                        <h1>漢堡</h1>
+                        <p>好吃</p>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                            <h1 class="item-title">tasty</h1>
+                        </div>
+                        <h1>漢堡</h1>
+                        <p>好吃</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

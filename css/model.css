@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
 }
-/* 固定返回首頁按鈕 */
+
 .back-home {
     position: fixed;
     top: 2vh; /* 距離螢幕頂部 2% */
@@ -16,19 +16,20 @@ body {
     z-index: 1000;
     font-size: 2vw; /* 根據螢幕寬度調整字體大小 */
 }
+
+
+
 .category {
-    aspect-ratio: 32 / 6; /* 設定容器為固定的 16:9 比例 */
     height: auto;
     position: relative;
     text-align: center;
-    padding: 200px 0;
+    padding: 5% 0; /* 更具靈活性的間距 */
     color: white;
     background-size: cover; /* 確保背景圖片覆蓋整個容器 */
     background-position: center; /* 背景圖片保持居中 */
     background-repeat: no-repeat; /* 防止背景圖片重複 */
     overflow: hidden; /* 防止內容超出邊界 */
 }
-
 
 .background-image {
     position: absolute;
@@ -39,41 +40,59 @@ body {
     object-fit: cover; /* 確保圖片按比例覆蓋 */
     z-index: -1; /* 確保背景圖片在文字後面 */
 }
+
 .category h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 5px black;
 }
+
 .category-items {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 3vw; /* 增加適應手機的間距 */
 }
+
 .category-item {
-    height: 20xp;
+    height: 10vw; /* 根據寬度適應視口 */
     width: 160px;
-    padding: 20px;
+    padding: 2vw;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     text-align: center;
     color: black;
     background-color: white; 
 }
+
 .category-item img {
     max-width: 100%;
     border-radius: 5px;
-    margin-top: 30px;
+    margin-top: 0.2rem;
 }
+
 .category-item p {
-    margin-top: 10px;
+    margin-top: 0.5rem;
     font-size: 1rem;
+}
+
+/* Responsive adjustments for tablets and mobile */
+@media (max-width: 1024px) {
+    .category-item {
+        width: 140px;
+        height: 150px;
+        padding: 25px;
+    }
 }
 
 @media (max-width: 768px) {
     .category-item {
-        width: 120px;
-        height: 150px;
-        padding: 15px;
+        width: 100px;
+        height: 130px;
+        padding: 20px;
+    }
+    
+    .category-items {
+        gap: 10px; /* Adjust item spacing for mobile */
     }
 }
