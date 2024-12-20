@@ -17,12 +17,27 @@ body {
     font-size: 2vw; /* 根據螢幕寬度調整字體大小 */
 }
 .category {
+    aspect-ratio: 32 / 6; /* 設定容器為固定的 16:9 比例 */
+    height: auto;
+    position: relative;
     text-align: center;
-    padding: 100px 0;
+    padding: 200px 0;
     color: white;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover; /* 確保背景圖片覆蓋整個容器 */
+    background-position: center; /* 背景圖片保持居中 */
+    background-repeat: no-repeat; /* 防止背景圖片重複 */
+    overflow: hidden; /* 防止內容超出邊界 */
+}
+
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保圖片按比例覆蓋 */
+    z-index: -1; /* 確保背景圖片在文字後面 */
 }
 .category h2 {
     font-size: 2.5rem;
