@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+#container {
+    width: 980px;
+    margin: 40px auto;
+    background-color: #3c516b;
+    padding: 40px 40px;
+    border: 15px solid #f6bb9e;
+}
+
+/*視窗背景色設定*/
+body {
+    background-color: rgb(212, 212, 212);
+}
+
+/*連結顏色設定*/
+a {
+    color: #df4839;
+    text-decoration: none;
+    display: inline-block;
+    width: 180px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.menu a:hover {
+    background-color: lightcoral;
+}
+
+/*導覽樣式設定*/
+.menu li {
+    list-style-type: none;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: lightyellow;
+    margin-bottom: 10px;
+}
+
+/*標題設定*/
+.h1 {
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #D98162;
+    border-left: 10px solid #ffffff;
+    border-right: 10px solid #ffffff;
+    text-align: center;
+    color: #F2A679;
+    box-shadow: 5px 5px 10px #000;
+    text-shadow: 5px 5px 10px #000;
+}
+
+h2 {
+    padding-top: 25px;
+    margin-left: 20px;
+    color: #F2A679;
+    text-shadow: 5px 5px 10px #000;
+    margin-top: 100px;
+}
+
+/*文繞圖設定*/
+.imgL {
+    float: left;
+    margin-left: 30px;
+}
+
+.clear {
+    clear: both;
+}
+
+.header ul li {
+    float: left;
+    list-style-type: none;
+}
+
+/*圓形圖片設定*/
+.round {
+    border-radius: 50%;
+}
+
+.photo {
+    width: 300px;
+    height: 300px;
+}
+
+.border {
+    border: 5px solid #ffffff;
+}
+
+.margin {
+    margin-bottom: 25px;
+}
+
+.margin-left {
+    margin-left: 25px;
+}
+
+.margin-right {
+    margin-right: 25px;
+}
+
+.border-radius {
+    border-radius: 20px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+/*文字設定*/
+.word {
+    font-size: 200%;
+    color: #ffffff;
+}
+
+.word2 {
+    color: #ffffff;
+    font-size: 150%;
+}
+
+.word3 {
+    color: #ffffff;
+    text-shadow: 5px 5px 10px #000;
+    margin-top: 100px;
+}
+.word4 {
+    color: #F2A679;
+    text-shadow: 5px 5px 10px #000;
+    margin-top: 220px;
+    margin-right: 200px;
+}
+
+/*利用偽元素設定樣式*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}

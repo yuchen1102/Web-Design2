@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+#contents {
+    margin: 0 auto;
+    background-color: rgba(222, 255, 184, 0.8);
+    margin: 40px;
+    padding: 40px 40px;
+    border: 1px solid #f6bb9e;
+}
+
+/*視窗背景色設定*/
+body {
+    background-color: rgb(212, 212, 212);
+    margin: 40px;
+    background-image: url(../img/blyat.jpg);
+    background-repeat: repeat;
+    background-position: top;
+    background-size: 299px 168px;
+    background-attachment: fixed;
+}
+
+/*連結顏色設定*/
+a {
+    color: #df4839;
+    text-decoration: none;
+    display: inline-block;
+    width: 180px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.menu a:hover {
+    background-color: lightcoral;
+}
+
+/*頁首,導覽,頁尾的共通設定*/
+
+
+/*導覽樣式設定*/
+.menu li {
+    list-style-type: none;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: lightyellow;
+    margin-right: 10px;
+}
+
+/*頁面標題設定*/
+h1 {
+    line-height: 1;
+    text-align: center;
+    font-size: 300%;
+    background-color: #6fbb9a;
+    color: #fff;
+    border: 5px dotted #95dbbd;
+    width: 300px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #000;
+    text-shadow: 5px 5px 10px #000;
+}
+
+/*次標題設定*/
+h2 {
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px dotted #94c8b1;
+    border-left: 10px solid #d0e35b;
+    color: #00b164;
+}
+
+/*小標題設定*/
+.h-sub {
+    padding: 10px;
+    background-color: rgb(223, 218, 211);
+    color: rgb(145, 81, 3);
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px inset;
+}
+
+/*內容區塊邊框設定*/
+
+
+/*「更多介紹」連結設定*/
+
+
+/*連結圖示設定*/
+
+
+/*區塊間分隔*/
+
+
+/*文繞圖設定*/
+.imgL {
+    float: left;
+    margin-right: 30px;
+}
+
+.imgR {
+    float: right;
+    margin-left: 30px;
+}
+
+.clear {
+    clear: both;
+}
+
+/*圓形圖片設定*/
+.round {
+    border-radius: 50%;
+}
+
+.photo {
+    width: 480px;
+    height: 320px;
+}
+
+/*利用偽元素設定樣式*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}

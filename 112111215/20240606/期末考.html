@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPH 個人網頁</title>
+    <link rel="stylesheet" href="../20240506/fontawesome-free-6.5.2-web/css/all.css">
+    <link rel="shortcut icon" href="../20240429/img/kiwi-bird-solid.svg" type="image/x-icon">
+    <style>
+        body {
+            width: 80%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0 auto;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+
+        }
+
+        .header {
+            background-color: #4f4caf;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            position: fixed;
+            width: 80%;
+            top: 0;
+            z-index: 1000;
+            left: 10%;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            overflow: visible;
+            /* 確保溢出部分可見 */
+            background-color: #333;
+            position: fixed;
+            width: 80%;
+            top: 70px;
+            z-index: 9999;
+        }
+
+        .navbar a,
+        .dropdown .dropbtn {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #4f4caf;
+            color: white;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: visible;
+            /* 確保溢出部分可見 */
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 100%;
+            /* 修改這一行，使下拉選單顯示在按鈕正下方 */
+            left: -20;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            scroll-margin-top: 140px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .content {
+
+            margin-top: 120px;
+            scroll-margin-top: 200px;
+
+        }
+
+        .about-me {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .about-me img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .section {
+            margin-top: 40px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            scroll-margin-top: 120px;
+        }
+
+
+
+        .license-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .license-item img {
+            max-width: 100px;
+            /* 可以根據需要調整圖片大小 */
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .license-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        .font {
+            font-size: large;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: static;
+            width: 100%;
+            bottom: 0;
+        }
+
+
+        .portfolio-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            scroll-margin-top: 120px;
+        }
+
+        .portfolio-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            scroll-margin-top: 120px;
+        }
+
+        .portfolio-item h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .portfolio-item p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .margin {
+            margin: 15px;
+        }
+
+        .margin-top {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="zh-Hant">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chuang Po-Hsun's Personal Website</title>
+        <link rel="stylesheet" href="css/index.css">
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            Chuang Po-Hsun 個人網頁 <svg xmlns="http://www.w3.org/2000/svg" height="20" width="25"
+                viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#ffffff"
+                    d="M96 64c0-17.7 14.3-32 32-32H448h64c70.7 0 128 57.3 128 128s-57.3 128-128 128H480c0 53-43 96-96 96H192c-53 0-96-43-96-96V64zM480 224h32c35.3 0 64-28.7 64-64s-28.7-64-64-64H480V224zM32 416H544c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32z" />
+            </svg>
+        </div>
+
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">關於我
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#about-me">自我介紹</a>
+                    <a href="#interest">興趣</a>
+                    <a href="#education">學歷</a>
+                    <a href="#skills">技能</a>
+                    <a href="#licenses">證照</a>
+                    <a href="#experience">經歷</a>
+                </div>
+            </div>
+            <div class="dropdown ">
+                <button class="dropbtn">作品集
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#20240321">20240321 HTML basic tag exercises</a>
+                    <a href="#20240325">20240325 Idol cats 1</a>
+                    <a href="#20240328">20240328 Web page style.html</a>
+                    <a href="#20240401">20240401 Idol cats 2</a>
+                    <a href="#20240408">20240408 Idol cats 3</a>
+                    <a href="#20240411">20240411 Idol cats 4</a>
+                    <a href="#20240415">20240415 Personal one-page web page.html</a>
+                    <a href="#20240502">20240429 Font introduction</a>
+                    <a href="#20240506">20240502 Typesetting</a>
+                    <a href="#20240509">20240506 Position</a>
+                    <a href="#20240513">20240513 Flex</a>
+                    <a href="#20240516">20240516 Responsive web page.html</a>
+                    <a href="#20240520">20240520 Latout01.html</a>
+                    <a href="#20240523">20240523 Latout02.html</a>
+                </div>
+            </div>
+            <a href="#contact">聯絡方式</a>
+        </div>
+
+        <div style="clear: both;"></div> <!-- 清除浮動 -->
+
+        <div class="content font" id="about-me">
+            <div class="about-me">
+                <img src="img/20190918135414-tommy-shelby-peaky-blinders.jpeg" alt="Your Photo">
+                <div>
+                    <h2>自我介紹</h2>
+                    <p>大家好，我是莊博勳，就讀於亞東科技大學資訊管理系。<br>歡迎來到我的個人網站。
+                        希望通過這個網站，讓大家更全面地認識我。這裡展示我的一些資訊、作品和聯繫方式，謝謝大家。</p>
+                </div>
+            </div>
+
+            <div class="section font" id="interest">
+                <h2>興趣</h2>
+                <ul>
+                    <li>看電影</li>
+                    <li>看別人打羽球</li>
+                    <li>打羽球</li>
+                </ul>
+
+            </div>
+
+            <div class="section font" id="education">
+                <h2>學歷</h2>
+                <ul>
+                    <li><a href="https://www.maes.ntpc.edu.tw/">民安國小</a></li>
+                    <li><a href="https://www.fyjh.ntpc.edu.tw/">福營國中</a></li>
+                    <li><a href="https://www.ykvs.ntpc.edu.tw/">鶯歌工商</a></li>
+                    <li><a href="https://mi.aeust.edu.tw/">亞東科技大學資訊管理系</a></li>
+                </ul>
+
+            </div>
+
+            <div class="section font" id="skills">
+                <h2>技能</h2>
+                <p>Python、HTML、Photoshop、Illustrator</p>
+            </div>
+
+            <div class="section font" id="licenses">
+                <h2>證照</h2>
+                <div class="license-item">
+                    <img src="img/丙檢證照.jpg" alt="普通重型機車駕照">
+                    <p>普通重型機車駕照</p>
+                </div>
+                <div class="license-item">
+                    <img src="img/汽車駕照.jpg" alt="普通小型車駕照">
+                    <p>普通小型車駕照</p>
+                </div>
+                <div class="license-item">
+                    <img src="img/機車駕照(1).jpg" alt="工業丙級證照">
+                    <p>餐飲丙級證照</p>
+                </div>
+            </div>
+
+            <div class="section font" id="experience">
+                <h2>經驗</h2>
+                <p>開過火車</p>
+            </div>
+
+        </div>
+
+        <div class="section font" id="portfolio">
+            <h2>作品集</h2>
+            <div class="portfolio-items" id="20240321">
+                <div class="portfolio-item">
+                    <a href="../20240321/HTML basic tag exercises.html">
+                        <h3>20240321 HTML basic tag exercises</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240325">
+                    <a href="../20240325/idol cats 1.html">
+                        <h3>20240325 Idol cats 1</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240328">
+                    <a href="../20240328/Web page style.html">
+                        <h3>20240328 Web page style.html</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240401">
+                    <a href="../20240401/idol cats 2.html">
+                        <h3>20240401 Idol cats 2</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240408">
+                    <a href="../20240408/idol cats 3.html">
+                        <h3>20240408 Idol cats 3</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240411">
+                    <a href="../20240411/idol cats 4.html">
+                        <h3>20240411 Idol cats 4</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240415">
+                    <a href="../20240415/Personal one-page web page.html">
+                        <h3>20240415 Personal one-page web page.html</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240429">
+                    <a href="../20240429/fontintroduction.html">
+                        <h3>20240429 Font introduction</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240502">
+                    <a href="../20240502/typesetting.html">
+                        <h3>20240502 Typesetting</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240506">
+                    <a href="../20240506/position.html">
+                        <h3>20240506 Position</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240513">
+                    <a href="../20240513/flex.html">
+                        <h3>20240513 Flex</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240516">
+                    <a href="../20240516/responsive web page.html">
+                        <h3>20240516 Responsive web page.html</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240520">
+                    <a href="../20240520/latout01.html">
+                        <h3>20240520 Latout01.html</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item" id="20240523">
+                    <a href="../20240523/layout02.html">
+                        <h3>20240523 Latout02.html</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content font" id="contact">
+            <h2>聯絡方式</h2>
+            <p>Email <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                </svg>: <a href="mailto:112111215@mail.aeust.edu.tw">goofy_ahh@mail.com</a></p>
+            <p>手機號碼 <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                </svg>: <a href="tel:0908907999">0908907999</a></p>
+            <a href="https://www.instagram.com/taylorswift/"><svg xmlns="http://www.w3.org/2000/svg" height="32"
+                    width="28"
+                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg></a><a href="https://www.youtube.com/watch?v=uoqJy_AEt-E"><svg class="margin"
+                    xmlns="http://www.w3.org/2000/svg" height="32" width="32"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M192 32c0 17.7 14.3 32 32 32c123.7 0 224 100.3 224 224c0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32c70.7 0 128 57.3 128 128c0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192c-17.7 0-32 14.3-32 32zM96 144c0-26.5-21.5-48-48-48S0 117.5 0 144V368c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144H128v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48V144z" />
+                </svg>
+        </div>
+
+        <div class="footer margin-top">
+            © 2024 Chuang Po-Hsun. All rights reserved.
+        </div>
+
+    </body>
+
+    </html>
+</body>
+
+</html>

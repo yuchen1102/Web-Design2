@@ -1,0 +1,54 @@
+body {
+    margin: 0px;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 0px auto;
+}
+
+header {
+    height: 300px;
+    background-color: lightblue;
+}
+
+nav {
+    height: 100px;
+    background-color: lightcoral;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    width: 20%;
+    background-color: lightgreen;
+}
+
+section {
+    width: 80%;
+    background-color: lightseagreen;
+}
+
+.sub-section {
+    min-height: 285px;
+    background-color: lightsalmon;
+    margin: 10px auto;
+    width: 98%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+figcaption {
+    font-size: 1.5em;
+}
+
+footer {
+    height: 100px;
+    background-color: lightgrey;
+}
