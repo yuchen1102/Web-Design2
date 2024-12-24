@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.keyart-container {
+  width: 100%;
+  height: 130vh;
+  /* 背景圖檔 */
+}
+.keyart-container .keyart-layer {
+  width: 100%;
+  height: 130vh;
+  background-size: auto 130vh;
+  background-position: bottom center;
+  z-index: -1;
+}
+.keyart-container .keyart-layer[id^=parallax] {
+  position: fixed;
+}
+.keyart-container #parallax-0 {
+  background-image: url(../img/parallax0.png);
+}
+.keyart-container #parallax-1 {
+  background-image: url(../img/parallax1.png);
+}
+.keyart-container #parallax-2 {
+  background-image: url(../img/parallax2.png);
+}
+.keyart-container #parallax-3 {
+  background-image: url(../img/parallax3.png);
+}
+.keyart-container #parallax-4 {
+  background-image: url(../img/parallax4.png);
+}
+.keyart-container #parallax-5 {
+  background-image: url(../img/parallax5.png);
+}
+.keyart-container #parallax-6 {
+  background-image: url(../img/parallax6.png);
+}
+.keyart-container #parallax-7 {
+  background-image: url(../img/parallax7.png);
+}
+.keyart-container #parallax-8 {
+  background-image: url(../img/parallax8.png);
+}
+
+.after {
+  height: 3333px;
+  background-color: #210002;
+  color: #fff;
+  margin-top: -50px;
+  padding: 111px 222px;
+  font-size: 22px;
+  line-height: 3;
+}/*# sourceMappingURL=ParallaxLab.css.map */

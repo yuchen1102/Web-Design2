@@ -168,27 +168,28 @@ h2 {
 
 
 .portfolio-items {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    scroll-margin-top: 120px;
+    display: none; /* 預設隱藏所有作品集 */
 }
 
-.portfolio-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    scroll-margin-top: 120px;
+.portfolio-items[data-year="大一"],
+.portfolio-items[data-year="大二"] {
+    display: block; /* 預設顯示大一和大二的作品集 */
 }
 
-.portfolio-item h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
+#year-selector {
+    margin-bottom: 20px;
 }
 
-.portfolio-item p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
+#year-selector button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
 }
+
+#year-selector button.active {
+    background-color: #007bff;
+}
+

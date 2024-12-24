@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滾動視差</title>
+    <link rel="stylesheet" href="css/cssReset.css">
+    <link rel="stylesheet" href="css/ParallaxLab.css">
+    
+</head>
+
+
+
+<body>
+    <!-- 主視覺 -->
+    <div class="keyart-container">
+        <div class="keyart-layer" id="parallax-0" speed="2"></div>
+        <div class="keyart-layer" id="parallax-1" speed="5"></div>
+        <div class="keyart-layer" id="parallax-2" speed="11"></div>
+        <div class="keyart-layer" id="parallax-3" speed="16"></div>
+        <div class="keyart-layer" id="parallax-4" speed="26"></div>
+        <div class="keyart-layer" id="parallax-5" speed="36"></div>
+        <div class="keyart-layer" id="parallax-6" speed="49"></div>
+        <div class="keyart-layer" id="parallax-7" speed="69"></div>
+        <div class="keyart-layer" id="parallax-8" speed="100"></div>
+    </div>
+
+    <div class="after"></div>
+
+</body>
+
+<script>
+    let layers = document.querySelectorAll('.keyart-layer[id^="parallax"]');
+    let speed, yPos;
+    //視窗捲動事件
+    window.addEventListener("scroll", function(event){
+        //文件垂直捲動的像素值
+        let fromTop = this.pageYOffset;
+
+        //偏移各圖層位置
+        for(let layer of layers){
+            speed = layer.getAttribute('speed');
+            //偏移 = 捲動畫 * 速度，在乘上個基數
+            yPos = -(fromTop * speed) * 0.01;
+            
+            layer.style.transform = `translateY(${yPos}px)`;
+        }   
+    });
+</script>
+</html>
+

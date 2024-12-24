@@ -1,0 +1,5 @@
+img:hover {
+  filter: opacity(50%) hue-rotate(200deg);
+  cursor: pointer;
+  transition: 2s;
+}/*# sourceMappingURL=style.css.map */

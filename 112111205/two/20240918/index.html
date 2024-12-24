@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動報名表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #bedfec;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .form-group img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .gender-option {
+            display: inline-block;
+            width: 350px;
+            padding: 10px;
+            border: 2px solid gray;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* 當選中時，改變框的顏色 */
+        input[type="radio"]:checked+label {
+            border-color: rgb(1, 1, 14);
+            background-color: rgb(123, 121, 241);
+        }
+
+        /* 隱藏實際的 radio button */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* 當鼠標懸停時，改變框的樣式 */
+        .gender-option:hover {
+            border-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>活動報名表</h1>
+        <h2>參與活動選擇</h2>
+
+        <form action="mailto:112111205@mail.aeust.edu.tw" method="post" enctype="text/plain">
+            <!-- 圖片展示 -->
+            <div class="form-group">
+                <img src="" alt="活動圖片">
+            </div>
+
+            <!-- 選擇活動梯次 -->
+            <div class="form-group">
+                <label for="event">欲報名的活動梯次</label>
+                <select id="event" name="event">
+                    <option value="trip1">1</option>
+                    <option value="trip2">2</option>
+                    <option value="trip3">3</option>
+                    <option value="trip4">4</option>
+                </select>
+            </div>
+
+            <!-- 個人資訊 -->
+            <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" placeholder="請輸入您的姓名">
+            </div>
+
+            <label for="gender">性別：</label><br>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male" class="gender-option">生理男</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female" class="gender-option">生理女</label>
+
+            <div class="form-group">
+                <label for="birthdate">出生年月日</label>
+                <input type="text" id="birthdate" name="birthdate" placeholder="YYYY/MM/DD">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">聯絡電話</label>
+                <input type="tel" id="phone" name="phone" placeholder="請填入電話號碼">
+            </div>
+
+            <div class="form-group">
+                <label for="email">聯絡 E-mail</label>
+                <input type="email" id="email" name="email" placeholder="請填入電子信箱">
+            </div>
+
+            <!-- 飲食習慣 -->
+            <div class="form-group">
+                <label>飲食習慣</label>
+                <input type="checkbox" id="meat" name="diet" value="meat">
+                <label for="meat">葷食</label><br>
+                <input type="checkbox" id="vegetarian" name="diet" value="vegetarian">
+                <label for="vegetarian">素食</label><br>
+                <input type="checkbox" id="ovo-lacto" name="diet" value="ovo-lacto">
+                <label for="ovo-lacto">蛋奶素</label><br>
+            </div>
+
+            <!-- 健康狀況 -->
+
+            <!-- 報名按鈕 -->
+            <button type="submit">提交報名</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+
+
+###
+
+###

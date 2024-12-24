@@ -1,0 +1,53 @@
+body {
+    background-color: lightgray;
+}
+
+#container {
+    width: 850px;
+    margin: 0px auto;
+    border-radius: 5px;
+    box-shadow: rgba(69, 69, 69, 0.4)0px 0px 12px 0px;
+    padding: 10px;
+    background-color: white;
+}
+
+.imgHeader {
+    max-width: 100%;
+    height: auto
+}
+
+h1,
+h2,
+h3 {
+    color: rgb(53, 135, 241);
+    font-weight: 400;
+}
+
+h1::before {
+    content: "";
+    border: 5px green, solid;
+    margin-right: 5px;
+}
+
+#main {
+    padding: 0px 30px 10px 30px;
+}
+
+.title p {
+    line-height: 0.5em;
+}
+
+.title P::before {
+    content: "！";
+    color: red;
+    margin-right: 5px;
+}
+
+.title p:last-child(2) {
+    margin-top: 3em;
+}
+
+.title p:last-child {
+    font-size: 10px;
+    margin-bottom: 3em;
+}

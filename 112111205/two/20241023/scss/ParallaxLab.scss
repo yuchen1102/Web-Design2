@@ -1,0 +1,53 @@
+$keyart-weight:100%;
+$keyart-height:130vh;
+
+.keyart-container{
+    width:$keyart-weight;
+    //由於沒有子物件撐開高度，須補高度設定
+    height:$keyart-height;
+
+    .keyart-layer{
+        //設fixed之後藥補寬度設定
+        width: $keyart-weight;
+        //寬度因為div是block物件的特性自動為100%
+        height: $keyart-height;
+
+        //讓背景塗在高度方面填滿，寬度則以圖片比例自動計算
+        background-size: auto $keyart-height;
+        //圖層寬>背景圖:以中央示人
+        background-position: bottom center;
+        //圖層寬<背景圖:重複填充。可省略
+        //background-repeat: repeat-x;
+        &[id^="parallax"]{
+            position: fixed;
+        }
+        z-index: -1;
+    }
+
+    /* 背景圖檔 */
+    #parallax-0{background-image: url(../img/parallax0.png)}
+    #parallax-1{background-image: url(../img/parallax1.png)}
+    #parallax-2{background-image: url(../img/parallax2.png)}
+    #parallax-3{background-image: url(../img/parallax3.png)}
+    #parallax-4{background-image: url(../img/parallax4.png)}
+    #parallax-5{background-image: url(../img/parallax5.png)}
+    #parallax-6{background-image: url(../img/parallax6.png)}
+    #parallax-7{background-image: url(../img/parallax7.png)}
+    #parallax-8{background-image: url(../img/parallax8.png)}
+
+}
+
+$keyart-near-color:#210002;
+
+.after{
+    height: 3333px;
+    //延伸背景
+    background-color: #210002;
+    color: #fff;
+    margin-top: -50px;
+    padding: 111px 222px;
+    font-size: 22px;
+    line-height: 3;
+}
+
+

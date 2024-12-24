@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation02</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .face {
+            width: 100px;
+            height: 100px;
+            background-image: url(../20241030/img/face01images.jfif);
+            background-size: cover;
+            position: absolute; 
+            animation: move 2s infinite; 
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0px,100px)  rotate(0deg);
+            }
+    
+            50% {
+                transform: translate(100px,100px)  rotate(360deg);
+                background-image: url(img/face02.images.jfif);
+            }
+    
+            100% {
+                transform: translate(0px,100px)  rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="face"></div>
+    </div>
+</body>
+</html>
